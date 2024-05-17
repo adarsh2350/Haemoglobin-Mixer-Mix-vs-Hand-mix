@@ -78,23 +78,24 @@ def main():
         df = pd.DataFrame(columns=columns)
 
         temp_dir = 'temp_dir'
-        for root, dirs, files in os.walk(temp_dir):
-            for file_name in files:
-                file_path = os.path.join(root, file_name)
-                date = os.path.basename(root)
-                df = parse_file(file_path, date, df)
+        for items in os.listdir(temp_dir):
+            for item in os.listdir(os.path.join(temp_dir, items)):
+                file_path = os.path.join(temp_dir, items, item)
+                if os.path.isfile(file_path):  
+                    date = items  
+                    df = parse_file(file_path, date, df)
         
         st.subheader("Processed DataFrame:")
         st.dataframe(df)
-
+        
         output = BytesIO()
         df.to_excel(output, index=False)
         output.seek(0)
 
         st.download_button(
             label="Download Excel file",
-            data=output,
-            file_name=f"{os.path.basename(temp_dir)}.xlsx",
+            data=output.getvalue(),
+            file_name=f"{os.listdir(temp_dir)[0]}.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 
