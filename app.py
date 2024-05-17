@@ -51,7 +51,9 @@ def parse_file(file_path, date, df):
                 row.update({f'Base Data {i+1}': base_readings[i] for i in range(15)})
                 row.update({f'Test Data {i+1}': test_readings[i] for i in range(180)})
                 
-                df = df.append(row, ignore_index=True)
+                temp_df = pd.DataFrame([row])
+                
+                df = pd.concat([df, temp_df], ignore_index=True)
 
                 collecting_test_data = False
                 test_readings = []
