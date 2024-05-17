@@ -22,7 +22,8 @@ def parse_file(file_path, date, df):
 
         if 'Collecting base data' in line:
             for j in range(i + 1, i + 16):
-                base_readings.append(int(lines[j].split(',')[0]))
+                base_readings = [int(lines[j].split(',')[0]) for j in range(i + 1, i + 16)]
+
         
         elif 'Repetition No. :' in line:
             repetition_no = int(line.split(':')[1].strip())
@@ -38,7 +39,8 @@ def parse_file(file_path, date, df):
         elif 'Collecting test data' in line:
             if collecting_test_data:
                 for j in range(i + 1, i + 181):  
-                    test_readings.append(int(lines[j].split(',')[0]))
+                    test_readings = [int(lines[j].split(',')[0]) for j in range(i + 1, i + 181)]
+
     
                 row = {
                     'Sample ID': sample_id,
@@ -50,7 +52,6 @@ def parse_file(file_path, date, df):
                     
                 row.update({f'Base Data {i+1}': base_readings[i] for i in range(15)})
                 row.update({f'Test Data {i+1}': test_readings[i] for i in range(180)})
-                
                 temp_df = pd.DataFrame([row])
                 
                 df = pd.concat([df, temp_df], ignore_index=True)
