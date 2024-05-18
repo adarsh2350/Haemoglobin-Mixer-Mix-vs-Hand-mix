@@ -4,6 +4,7 @@ import re
 import os
 import pandas as pd
 from io import BytesIO
+from statistics import mode
 
 def parse_file(file_path, date, df):
     
@@ -52,6 +53,8 @@ def parse_file(file_path, date, df):
                     
                 row.update({f'Base Data {i+1}': base_readings[i] for i in range(15)})
                 row.update({f'Test Data {i+1}': test_readings[i] for i in range(180)})
+                row.update({f'base_data_mod_avg': mode(base_readings)})
+                row.update({f'test_data_mod_avg': mode(test_readings[-15:])})
                 temp_df = pd.DataFrame([row])
                 
                 df = pd.concat([df, temp_df], ignore_index=True)
@@ -74,7 +77,7 @@ def main():
 
         base_data_columns = [f'Base Data {i+1}' for i in range(15)]
         test_data_columns = [f'Test Data {i+1}' for i in range(180)]
-        columns = ['Sample ID', 'Device ID', 'Date', 'Repetition No.', 'Case'] + base_data_columns + test_data_columns
+        columns = ['Sample ID', 'Device ID', 'Date', 'Repetition No.', 'Case'] + base_data_columns + test_data_columns + ['base_data_mod_avg', 'test_data_mod_avg']
         df = pd.DataFrame(columns=columns)
 
         temp_dir = 'temp_dir'
