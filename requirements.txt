@@ -3,7 +3,6 @@ streamlit
 pandas
 openpyxl
 statistics
-re
 Counter
 gspread
 math
