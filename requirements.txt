@@ -4,3 +4,4 @@ pandas
 openpyxl
 statistics
 Counter
+gspread
