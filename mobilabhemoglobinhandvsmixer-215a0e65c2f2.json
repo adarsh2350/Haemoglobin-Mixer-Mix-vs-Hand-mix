@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mobilabhemoglobinhandvsmixer",
+  "private_key_id": "215a0e65c2f2da0705c0b252d7e4e3c71b434386",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDjv55G7JU30/8J\nqGLjFYstIXp0a5mJNGX2Vh1PBBrWO7isHthZidtGYp0iWtG8N0F2NeCgOhknpCda\nKDtnGChn4OKT/r2WgRC0WvzPIhtbL3GFKyZ1Ynscjj+/gINwTxIU7ZwxkGdHk0Y5\nkiVA/5GLExU+nZ4esbGEP9T6ciFVyKeZShdAWukYtyBYjZhrb9K14AmPJPwXatBN\n2wHViOduUbyUZkeXGNDlBL+Nv5fgrRDsIOzgId3VYcTtkA42thoyEcoS/aBwgvTy\nLTnmIM/tWnY6JHRt7wouhfIpw/xD+qPnViOvoS+WwS8O854lRxNN4f5FInfNB9xJ\nEKZ0wErHAgMBAAECggEAam45Rra30vOoqzg8IhgGxsvu4GoKQbKxdYlvv+XQrs4Q\n8qqle05voPhjq1La0cTWvCnYc7hC2iId28WSYQ7KjyTqbbPtoGBnUIl2vEuZkibd\nO5jbK58enk0hoFor0ne5IPubcxQjF7FM74mLDFGCkAYWdwEMjBaJOR7lZjagumed\nkKXC7Gy5dxObfaValy/ttR4w0XKNnjoA3zvmYCWYGrXxvsiG0JoKuL/k8zOmhw+S\nV0wm18ZtenMf1du8LLP0jm/lVTW1+lrOFDDTYwj8IUubKjp8Fv96gkaTYDWa7FEg\ngX1+ByHWgEFZ0En7QMb3TtyImTTgLlwPR8rlHO4tdQKBgQD5opT+2vaZtTF5rgnb\n9SStfhHFTx6qhM0fQJpatbzDbAdZ7KImYLEa6E0fYv50cFpmjzBfQKXJF7V4I+gz\n+N+RNNZ19V/0Jc2dQGgkXNkIhNre9KD7OEUbsozVKIcAQgez6pvUtPvvoSUTV+Ul\npNv3HEE+2X3OPFm41z/VjpsFqwKBgQDpji2er8NGatKmyQAWcrhR+YNH05VMkmOn\n43kenvBWE1El4pjbBMWcU9XsrrN3OsJRkaIoxmWOYgwn7xxaRxCltwskZQIBiLhB\nkq0Pc8Uov3pTQN539t0e40dKqYnCNiYre+cAsrgpE5TYCo/5DI9Ni6YpDoF7MWE8\nj0y/h+s7VQKBgCqW106nsrzEkf1NePci2rASuxtrhTLYV1qGng7txJeenZ505bEg\ne/a4PTgmnnzlEjc/JKSLlf0540bs8Ve0lQfj+NbFFyrDLFIww9O4V3rBl8nD+JcD\noZ65FpfjQy0DFudWFmHywqy+VGH5c+m5N6HwGx2K45DE8RW8+3IG02HjAoGBAOMZ\n+0Yohms8iCThohIx7wTW6E65cJ2KYxjnWejqh6xLEEcUdanSlAyUgJmqrpurKTSD\ntfiMIkg3ErbqDNnD7G4W9OCozzCKrxAj/d/epMIgnmPB2hEwnIbiXXo+LNQKL0dt\nLYxCPEzE26DPdHupONcgiau2jTUrKO/oL6q2EYgZAoGBAMEk2qsym9oOdhmqbXfO\n5aMsHDDItWc7OejAlU4pn3tdZJws9m6y3n+z5F9mY0EuOjbx9K+dRB/YR/hObL2f\nRIX70dwfjOHcaFj/lvUn+7Sf9vl7J1VJge1le0e/snqHVQx1gVgwin5QjQ3VLqfX\naC77580IL97So9T3LddLNc6l\n-----END PRIVATE KEY-----\n",
+  "client_email": "mobilabhemoglobinhandvsmixer@mobilabhemoglobinhandvsmixer.iam.gserviceaccount.com",
+  "client_id": "106192895788648690843",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mobilabhemoglobinhandvsmixer%40mobilabhemoglobinhandvsmixer.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
