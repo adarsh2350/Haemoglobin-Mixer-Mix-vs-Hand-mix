@@ -4,6 +4,5 @@ pandas
 openpyxl
 statistics
 Counter
-gspread
 math
 BytesIO
