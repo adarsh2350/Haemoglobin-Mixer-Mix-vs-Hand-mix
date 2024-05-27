@@ -6,4 +6,4 @@ statistics
 Counter
 gspread
 matplotlib
-sklearn
+scikit-learn
