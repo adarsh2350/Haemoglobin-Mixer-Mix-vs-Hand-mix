@@ -6,7 +6,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 import zipfile
 from io import BytesIO
-from fpdf import FPDF
 import matplotlib.pyplot as plt
 from functions.upload import upload_to_sheet
 from functions.plot import plots
