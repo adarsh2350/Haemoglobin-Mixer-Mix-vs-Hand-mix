@@ -5,3 +5,4 @@ openpyxl
 statistics
 Counter
 gspread
+matplotlib
