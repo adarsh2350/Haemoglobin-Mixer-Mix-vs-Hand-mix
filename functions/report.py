@@ -24,7 +24,9 @@ def create_report(data, report):
 
     avg_error_df['Date'] = avg_error_df['Date'].astype(str)
 
-    df['binary_error'] = df['error%'] < 10
+    df['concentration'] = pd.to_numeric(df['concentration'], errors='coerce')
+    df['actual'] = pd.to_numeric(df['actual'], errors='coerce')
+    df['binary_error'] = (((df['concentration'] >= 11.5) & (df['actual'] >= 11.5)) | ((df['concentration'] <= 17) & (df['actual'] <= 17)))
 
     hand_mix = df[df['Case'] == 'Hand Mix']
     hand_tp = (hand_mix['binary_error'] == 1).sum()
