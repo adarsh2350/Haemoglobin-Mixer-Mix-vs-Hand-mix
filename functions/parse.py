@@ -2,12 +2,17 @@ import re
 import pandas as pd
 import math
 from functions.stat import mod_avg
+import streamlit as st
 
-def parse_file(file_path, date, df, haemoglobin_sample, factor):
+def parse_file(file_path, date, df, haemoglobin_sample, actual_val, factor):
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
     sample_id = file_path[29:34]
+    suffixes = [".", ".t", ".tx", ".txt"]
+    for suffix in suffixes:
+        if sample_id.endswith(suffix):
+            sample_id =  sample_id[:-len(suffix)]
     device_id = re.search(r'Device ID:(\w+)', lines[1]).group(1)
     base_readings = []
     test_readings = []
@@ -53,7 +58,10 @@ def parse_file(file_path, date, df, haemoglobin_sample, factor):
                 # Adding mod_avg_test_data
                 row.update({f'test_data_mod_avg': mod_avg(test_readings[-15:])})
                 # Adding actual conc.
-                row.update({f'actual': haemoglobin_sample[int(numeric_sample_id) + 1]})
+                for i in range(len(haemoglobin_sample)):
+                    if haemoglobin_sample[i] == sample_id:
+                        row.update({f'actual': float(actual_val[i])})
+                        break
                 # Adding absorption
                 row.update({f'absorption': round(math.log10(row['base_data_mod_avg'] / row['test_data_mod_avg']), 4)})
                 # Adding concentration
