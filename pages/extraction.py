@@ -28,15 +28,15 @@ def main():
     haemoglobin_sample = sheet1.col_values(2)
     actual_val = sheet1.col_values(3)
     extraction_sheet = spreadsheet2.get_worksheet(0)  
-    report = spreadsheet2.get_worksheet(1)
-    status = spreadsheet2.get_worksheet(2)
+    # report = spreadsheet2.get_worksheet(3)
+    status = spreadsheet2.get_worksheet(1)
 
 
 
-    # Creating report
-    if st.button("Update Report"):
-        create_report(extraction_sheet, report)
-        st.success('Report updated')
+    # # Creating report
+    # if st.button("Update Report"):
+    #     create_report(extraction_sheet, report)
+    #     st.success('Report updated')
 
 
 
@@ -140,4 +140,3 @@ def main():
 
 def extraction():
     main()
-
